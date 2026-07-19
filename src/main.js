@@ -13,7 +13,7 @@ import { float } from 'three/tsl';
 const gui = new GUI();
 const gltfLoader = new GLTFLoader();
 const dracoLoader = new DRACOLoader();
-dracoLoader.setDecoderPath('../static/draco/')
+dracoLoader.setDecoderPath('/static/draco/')
 gltfLoader.setDRACOLoader(dracoLoader)
 
 
@@ -63,7 +63,7 @@ renderer.setSize(sizes.width, sizes.height);
 
 //models
 let particles = null;
-gltfLoader.load('../static/models.glb',(gltf)=>{
+gltfLoader.load('/static/models.glb',(gltf)=>{
 particles = {}
 particles.index = 0;
 //positions
